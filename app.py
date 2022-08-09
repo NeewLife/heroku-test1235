@@ -13,7 +13,7 @@ def db_create():
 
     engine.connect()
     engine.execute("""
-        CREATE TABLE IF NOT EXISTS iris(
+        CREATE TABLE iris(
             sepal_length FLOAT NOT NULL,
             sepal_width FLOAT NOT NULL,
             pepal_length FLOAT NOT NULL,
