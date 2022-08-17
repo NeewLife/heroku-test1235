@@ -77,6 +77,8 @@ def private1():
 
     content = request.get_json()
     print(content)
+    content1= content['userRequest']['block']
+    print(content1)
 
     dataSend = {
     "version": "2.0",
