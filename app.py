@@ -81,34 +81,43 @@ def private1():
     "template": {
         "outputs": [
         {
-            "basicCard": {
-            "title": "신혼부부 특별공급",
-            "thumbnail": {
-                "imageUrl": "https://raw.githubusercontent.com/NeewLife/heroku-test1235/main/image/%EB%AF%BC%EA%B0%84%EC%8B%A0%ED%98%BC%EB%B6%80%EB%B6%80.png",
-                "fixedRatio": "true"
-            },
-            "buttons": [
+            "carousel": {
+            "type": "basicCard",
+            "items": [
                 {
-                "action": "webLink",
-                "webLinkUrl": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=4&cnpClsNo=1&search_put=",
-                "label": "정보",
+                    "title": "신혼부부 특별공급",
+                    "thumbnail": {
+                        "imageUrl": "https://raw.githubusercontent.com/NeewLife/heroku-test1235/main/image/%EB%AF%BC%EA%B0%84%EC%8B%A0%ED%98%BC%EB%B6%80%EB%B6%80.png",
+                        "fixedRatio": True,
+                        "width": 378,
+                        "height": 378
+                    },
+                    "buttons": [
+                        {
+                        "action": "webLink",
+                        "webLinkUrl": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=4&cnpClsNo=1&search_put=",
+                        "label": "정보",
+                        }
+                    ]
+                },
+                {
+                    "title": "생애최초 특별공급",
+                    "thumbnail": {
+                        "imageUrl": "https://raw.githubusercontent.com/NeewLife/heroku-test1235/main/image/%EB%AF%BC%EA%B0%84%EC%83%9D%EC%95%A0%EC%B5%9C%EC%B4%88.png",
+                        "fixedRatio": True,
+                        "width": 378,
+                        "height": 378
+                    },
+                    "buttons": [
+                        {
+                        "action": "webLink",
+                        "webLinkUrl": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=4&cnpClsNo=1&search_put=",
+                        "label": "정보",
+                        }
+                    ]
                 }
             ]
-            },
-                        "basicCard": {
-            "title": "생애최초 특별공급",
-            "thumbnail": {
-                "imageUrl": "https://raw.githubusercontent.com/NeewLife/heroku-test1235/main/image/%EB%AF%BC%EA%B0%84%EC%83%9D%EC%95%A0%EC%B5%9C%EC%B4%88.png",
-                "fixedRatio": "true"
-            },
-            "buttons": [
-                {
-                "action": "webLink",
-                "webLinkUrl": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=4&cnpClsNo=1&search_put=",
-                "label": "정보",
-                }
-            ]
-            },
+        }
         }
         ]
     }
