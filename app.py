@@ -53,14 +53,19 @@ def private():
                         "buttons": [
                     {
                         "action": "message",
-                        "label": "일반",
+                        "label": "일반공급",
                         "messageText": "일반분양입니다."
                     },
                     {
-                        "action": "message",
-                        "label": "특별",
-                        "messageText": "특별분양입니다."
-                        }
+                        "action": "block",
+                        "label": "특별공급",
+                        "blockId": "62f5eb9070055f434dcd0a04"
+                    },
+                    {
+                        "action": "block",
+                        "label": "우선공급",
+                        "blockId": "62f5ebc370055f434dcd0a0b"
+                    }
                         ]
                     }
                 }
