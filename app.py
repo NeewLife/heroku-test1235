@@ -44,90 +44,28 @@ def private():
         "version": "2.0",
         "template": {
             "outputs": [
-            {
-                "carousel": {
-                "type": "commerceCard",
-                "header": {
-                    "title": "커머스 카드\n케로셀 헤드 예제",
-                    "thumbnail": {
-                    "imageUrl": "https://t1.kakaocdn.net/openbuilder/sample/lj3JUcmrzC53YIjNDkqbWK.jpg"
+                {
+                    "simpleText": {
+                        "text": "간단한 텍스트 요소입니다."
                     }
-                },
-                "items": [
-                    {
-                    "description": "따끈따끈한 보물 상자 팝니다",
-                    "price": 10000,
-                    "discount": 1000,
-                    "currency": "won",
-                    "thumbnails": [
-                        {
-                        "imageUrl": "https://t1.kakaocdn.net/openbuilder/sample/lj3JUcmrzC53YIjNDkqbWK.jpg",
-                        "link": {
-                            "web": "https://store.kakaofriends.com/kr/products/1542"
-                        }
-                        }
-                    ],
-                    "profile": {
-                        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4BJ9LU4Ikr_EvZLmijfcjzQKMRCJ2bO3A8SVKNuQ78zu2KOqM",
-                        "nickname": "보물상자 팝니다"
-                    },
+                    ,
                     "buttons": [
-                        {
-                        "label": "구매하기",
-                        "action": "webLink",
-                        "webLinkUrl": "https://store.kakaofriends.com/kr/products/1542"
-                        },
-                        {
-                        "label": "전화하기",
-                        "action": "phone",
-                        "phoneNumber": "354-86-00070"
-                        },
-                        {
-                        "label": "공유하기",
-                        "action": "share"
-                        }
-                    ]
+                    {
+                        "action": "message",
+                        "label": "일반",
+                        "messageText": "일반분양입니다."
                     },
                     {
-                    "description": "따끈따끈한 보물 상자 팝니다",
-                    "price": 10000,
-                    "discount": 1000,
-                    "currency": "won",
-                    "thumbnails": [
-                        {
-                        "imageUrl": "https://t1.kakaocdn.net/openbuilder/sample/lj3JUcmrzC53YIjNDkqbWK.jpg",
-                        "link": {
-                            "web": "https://store.kakaofriends.com/kr/products/1542"
-                        }
-                        }
-                    ],
-                    "profile": {
-                        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4BJ9LU4Ikr_EvZLmijfcjzQKMRCJ2bO3A8SVKNuQ78zu2KOqM",
-                        "nickname": "보물상자 팝니다"
-                    },
-                    "buttons": [
-                        {
-                        "label": "구매하기",
-                        "action": "webLink",
-                        "webLinkUrl": "https://store.kakaofriends.com/kr/products/1542"
-                        },
-                        {
-                        "label": "전화하기",
-                        "action": "phone",
-                        "phoneNumber": "354-86-00070"
-                        },
-                        {
-                        "label": "공유하기",
-                        "action": "share"
+                        "action": "message",
+                        "label": "특별",
+                        "messageText": "특별분양입니다."
                         }
                     ]
-                    }
-                ]
                 }
-            }
             ]
         }
     }
+
     return jsonify(dataSend)
 
 if __name__ == "__main__":
