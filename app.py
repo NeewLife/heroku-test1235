@@ -18,28 +18,22 @@ def Keyboard():
 def Message():
 
     content = request.get_json()
-    content = content['userRequest']
-    content = content['utterance']
+    print(content)
+    #content = content['userRequest']
+    #content = content['utterance']
 
-    if content == u"안녕":
-        dataSend = {
-            "version": "2.0",
-            "template": {
-                "outputs": [
-                    {
-                        "carousel": {
-                            "type" : "basicCard",
-                            "items": [
-                                {
-                                    "title" : "",
-                                    "description" : "안녕하세요"
-                                }
-                            ]
-                        }
+    dataSend = {
+        "version": "2.0",
+        "template": {
+            "outputs": [
+                {
+                    "simpleText": {
+                        "text": "간단한 텍스트 요소입니다."
                     }
-                ]
-            }
+                }
+            ]
         }
+    }
     return jsonify(dataSend)
 
 if __name__ == "__main__":
