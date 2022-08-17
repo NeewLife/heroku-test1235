@@ -2,6 +2,9 @@ from flask import Flask, request, jsonify
 import sys
 app = Flask(__name__)
 
+@app.route("/")
+def hello():
+    return "51"
 
 @app.route('/keyboard')
 def Keyboard():
