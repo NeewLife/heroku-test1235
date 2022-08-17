@@ -36,6 +36,10 @@ def Message():
 
 @app.route('/private')
 def private():
+
+    content = request.get_json()
+    print(content)
+    
     dataSend = {
         "version": "2.0",
         "template": {
