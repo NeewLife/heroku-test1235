@@ -39,6 +39,8 @@ def private():
 
     content = request.get_json()
     print(content)
+    content1= content['userRequest']['block']
+    print(content1)
     
     dataSend = {
         "version": "2.0",
@@ -47,7 +49,7 @@ def private():
                 {
                     "basicCard": 
                     {
-                        "title": "간단한 텍스트 요소입니다.",
+                        "title": "알고 싶으신 민간분양 유형을 눌러주세요.",
                         "buttons": [
                     {
                         "action": "message",
