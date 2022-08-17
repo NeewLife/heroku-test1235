@@ -45,11 +45,10 @@ def private():
         "template": {
             "outputs": [
                 {
-                    "simpleText": {
-                        "text": "간단한 텍스트 요소입니다."
-                    }
-                    ,
-                    "buttons": [
+                    "basicCard": 
+                    {
+                        "title": "간단한 텍스트 요소입니다.",
+                        "buttons": [
                     {
                         "action": "message",
                         "label": "일반",
@@ -60,11 +59,14 @@ def private():
                         "label": "특별",
                         "messageText": "특별분양입니다."
                         }
-                    ]
+                        ]
+                    }
                 }
-            ]
+                    
+                ]
+            }
         }
-    }
+    
 
     return jsonify(dataSend)
 
