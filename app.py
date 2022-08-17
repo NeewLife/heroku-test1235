@@ -73,7 +73,7 @@ def private():
     return jsonify(dataSend)
 
 @app.route('/private/special', methods=['POST'])
-def private1():
+def private2():
 
     content = request.get_json()
     print(content)
@@ -176,8 +176,8 @@ def private1():
     }
     return jsonify(dataSend)
 
-@app.route('/private/special', methods=['POST'])
-def private1():
+@app.route('/private/priority', methods=['POST'])
+def private3():
 
     content = request.get_json()
     print(content)
