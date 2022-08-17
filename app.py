@@ -34,7 +34,7 @@ def Message():
     }
     return jsonify(dataSend)
 
-@app.route('/private')
+@app.route('/private', methods=['POST'])
 def private():
 
     content = request.get_json()
