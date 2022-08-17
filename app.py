@@ -49,6 +49,11 @@ def private():
                             "action": "message",
                             "label": "일반",
                             "messageText": "일반공급입니다."
+                        },
+                        {
+                            "action": "message",
+                            "label": "특별공급",
+                            "messageText": "특별공급입니다."                   
                         }
                     ]
                 }
