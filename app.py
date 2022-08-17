@@ -88,9 +88,9 @@ def private1():
                     "title": "신혼부부 특별공급",
                     "thumbnail": {
                         "imageUrl": "https://raw.githubusercontent.com/NeewLife/heroku-test1235/main/image/%EB%AF%BC%EA%B0%84%EC%8B%A0%ED%98%BC%EB%B6%80%EB%B6%80.png",
-                        "fixedRatio": true,
-                        "width": 378,
-                        "height": 378
+                        "fixedRatio": True,
+                        "width": 600,
+                        "height": 600
                     },
                     "buttons": [
                         {
@@ -104,9 +104,9 @@ def private1():
                     "title": "생애최초 특별공급",
                     "thumbnail": {
                         "imageUrl": "https://raw.githubusercontent.com/NeewLife/heroku-test1235/main/image/%EB%AF%BC%EA%B0%84%EC%83%9D%EC%95%A0%EC%B5%9C%EC%B4%88.png",
-                        "fixedRatio": true,
-                        "width": 378,
-                        "height": 378
+                        "fixedRatio": True,
+                        "width": 600,
+                        "height": 600
                     },
                     "buttons": [
                         {
