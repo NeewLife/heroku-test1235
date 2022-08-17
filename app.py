@@ -19,8 +19,9 @@ def Message():
 
     content = request.get_json()
     print(content)
-    #content = content['userRequest']
-    #content = content['utterance']
+    content1 = content['userRequest']['utterance']
+    print(content1)
+    
 
     dataSend = {
         "version": "2.0",
