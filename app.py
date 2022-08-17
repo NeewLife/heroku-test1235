@@ -176,5 +176,77 @@ def private1():
     }
     return jsonify(dataSend)
 
+@app.route('/private/special', methods=['POST'])
+def private1():
+
+    content = request.get_json()
+    print(content)
+    content1= content['userRequest']['block']
+    print(content1)
+
+    dataSend = {
+    "version": "2.0",
+    "template": {
+        "outputs": [
+        {
+            "carousel": {
+            "type": "basicCard",
+            "items": [
+                {
+                    "title": "대규모택지 개발지구 우선공급",
+                    "thumbnail": {
+                        "imageUrl": "https://raw.githubusercontent.com/NeewLife/heroku-test1235/main/image/%EB%AF%BC%EA%B0%84%EB%8C%80%EA%B7%9C%EB%AA%A8%ED%83%9D%EC%A7%80.png",
+                        "fixedRatio": True,
+                        "width": 378,
+                        "height": 378
+                    },
+                    "buttons": [
+                        {
+                        "action": "webLink",
+                        "webLinkUrl": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=3&cnpClsNo=1&search_put=",
+                        "label": "정보",
+                        }
+                    ]
+                },
+                {
+                    "title": "임대사업자 우선공급",
+                    "thumbnail": {
+                        "imageUrl": "https://raw.githubusercontent.com/NeewLife/heroku-test1235/main/image/%EB%AF%BC%EA%B0%84%EC%9E%84%EB%8C%80%EC%82%AC%EC%97%85%EC%9E%90.png",
+                        "fixedRatio": True,
+                        "width": 378,
+                        "height": 378
+                    },
+                    "buttons": [
+                        {
+                        "action": "webLink",
+                        "webLinkUrl": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=3&cnpClsNo=1&search_put=",
+                        "label": "정보",
+                        }
+                    ]
+                },
+                {
+                    "title": "주상복합 건축물의 건설부지 소유자 특별공급",
+                    "thumbnail": {
+                        "imageUrl": "https://raw.githubusercontent.com/NeewLife/heroku-test1235/main/image/%EB%AF%BC%EA%B0%84%EC%A3%BC%EC%83%81%EB%B3%B5%ED%95%A9.png",
+                        "fixedRatio": True,
+                        "width": 378,
+                        "height": 378
+                    },
+                    "buttons": [
+                        {
+                        "action": "webLink",
+                        "webLinkUrl": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=3&cnpClsNo=1&search_put=",
+                        "label": "정보",
+                        }
+                    ]
+                },
+            ]
+        }
+        }
+        ]
+    }
+    }
+    return jsonify(dataSend)
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0') # Flask 기본포트 5000번
