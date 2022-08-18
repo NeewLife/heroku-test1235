@@ -18,7 +18,8 @@ def hello():
 def commit():
     content = request.get_json()
     response = content['userRequest']['utterance']
-
+    print(response)
+    print(type(response))
     print(database.area(response))
     
 
