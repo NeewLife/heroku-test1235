@@ -23,13 +23,45 @@ def db_create():
             species VARCHAR(100) NOT NULL
         );"""
     )
+    
+    engine.execute("""
+        CREATE TABLE IF NOT EXISTS area(
+            name VARCHAR(100) NOT NULL,
+            division VARCHAR(100) NOT NULL,
+            location VARCHAR(100) NOT NULL,
+            notice_date DATE NOT NULL,
+            start_day DATE NOT NULL,
+            end_day DATE NOT NULL,
+            release_date DATE NOT NULL,
+            rink VARCHAR(100) NOT NULL
+        );"""
+    )
+
+    engine.execute("""
+        CREATE TABLE IF NOT EXISTS score(
+            name VARCHAR(100) NOT NULL,
+            division VARCHAR(100) NOT NULL,
+            score INT NOT NULL,
+            input INT NOT NULL
+        );"""
+    )
+
     data = pd.read_csv('data/iris.csv')
     print(data)
     data.to_sql(name='iris', con=engine, schema = 'public', if_exists='replace', index=False)
 
+    data = pd.read_csv('data/area.csv')
+    print(data)
+    data.to_sql(name='area', con=engine, schema = 'public', if_exists='replace', index=False)
+
+    data = pd.read_csv('data/score.csv',encoding = 'CP949')
+    print(data)
+    data.to_sql(name='score', con=engine, schema = 'public', if_exists='replace', index=False)
+
 
 @app.route("/")
 def hello():
+    db_create()
     return "51"
 
 @app.route('/keyboard')
