@@ -17,6 +17,7 @@ def hello():
 @app.route("/commit", methods=['POST'])
 def commit():
     content = request.get_json()
+    print(content)
     response = content['userRequest']['utterance']
     print(response)
     print(type(response))
