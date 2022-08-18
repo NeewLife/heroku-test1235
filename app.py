@@ -3,6 +3,7 @@ import pandas as pd
 from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String
 import sys
 import psycopg2
+import database
 
 
 app = Flask(__name__)
@@ -12,6 +13,11 @@ app = Flask(__name__)
 def hello():
     #db_create()
     return "555"
+
+@app.route("/")
+def commit():
+    response = request.get_json(['userRequest']['utterance'])
+    print(database.area(response))
 
 @app.route("/test", methods=['POST'])
 def test():
