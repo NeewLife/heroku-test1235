@@ -14,10 +14,11 @@ def hello():
     #db_create()
     return "555"
 
-@app.route("/")
+@app.route("/commit", methods=['POST'])
 def commit():
     response = request.get_json(['userRequest']['utterance'])
     print(database.area(response))
+    
 
 @app.route("/test", methods=['POST'])
 def test():
