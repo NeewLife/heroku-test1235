@@ -1,3 +1,9 @@
+from flask import Flask, request, jsonify
+import pandas as pd
+from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String
+import sys
+import psycopg2
+
 ## DB 연결 Local
 def db_create():
     # 로컬
@@ -50,3 +56,4 @@ def db_create():
     data = pd.read_csv('data/score.csv',encoding = 'CP949')
     print(data)
     data.to_sql(name='score', con=engine, schema = 'public', if_exists='replace', index=False)
+
