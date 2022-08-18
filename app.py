@@ -275,8 +275,6 @@ def private3():
     return jsonify(dataSend)
 
 
-
-
 if __name__ == "__main__":
     #db_create()
     app.run(host='0.0.0.0') # Flask 기본포트 5000번
