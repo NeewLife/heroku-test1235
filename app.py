@@ -16,7 +16,9 @@ def hello():
 
 @app.route("/commit", methods=['POST'])
 def commit():
-    response = request.get_json(['userRequest']['utterance'])
+    content = request.get_json()
+    response = content['userRequest']['utterance']
+
     print(database.area(response))
     
 
