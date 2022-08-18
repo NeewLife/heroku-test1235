@@ -29,7 +29,10 @@ def test():
                         "text": "<사용자 발화>입니다."
                     }
                 }
-            ]
+            ],
+            "userRequest": {
+                "utterance": "<사용자 발화>"
+            }
         }
     }
     return jsonify(dataSend)
