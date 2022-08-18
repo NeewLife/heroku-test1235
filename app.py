@@ -21,8 +21,6 @@ def commit():
     response = content['userRequest']['utterance']
     print(response)
     print(type(response))
-
-    print(database.area(response))
     
 
 @app.route("/test", methods=['POST'])
