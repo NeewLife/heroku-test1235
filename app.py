@@ -18,7 +18,7 @@ def hello():
 def commit():
     content = request.get_json()
     print(content)
-    response = content['action']['params']['sys_text']
+    response = content['action']['params']
     print(response)
     print(type(response))
 
