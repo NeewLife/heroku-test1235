@@ -66,6 +66,14 @@ def area(response):
     print(type(rows))
     return rows
 
+app = Flask(__name__)
+
+
+@app.route("/")
+def hello():
+    #db_create()
+    return "555"
+
 if __name__=='__main__':
     # db_create()
     app.run(host='0.0.0.0')
