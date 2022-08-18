@@ -17,7 +17,7 @@ def hello():
 def test():
     content = request.get_json()
     print(content)
-    content1= content['utterance']['block']
+    content1= content['userRequest']['utterance']
     print(content1)
 
     dataSend = {
