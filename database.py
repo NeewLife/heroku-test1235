@@ -58,7 +58,6 @@ def db_create():
     data.to_sql(name='score', con=engine, schema = 'public', if_exists='replace', index=False)
 
 def area(response):
-    response = request.get_json(['userRequest']['utterance'])
     conn_string = "host = 'ec2-107-23-76-12.compute-1.amazonaws.com' dbname = 'd7njsi7ltrih2l' user = 'avoldyshprcjzu' password = '2a92b7788746e69afe72137c1021fdb9966e4ceb2c41ad68c71e7aedd7e65db3'"
     conn = psycopg2.connect(conn_string)
     cur = conn.cursor()
