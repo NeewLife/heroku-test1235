@@ -57,3 +57,15 @@ def db_create():
     print(data)
     data.to_sql(name='score', con=engine, schema = 'public', if_exists='replace', index=False)
 
+def area(response):
+    conn_string = "host = 'ec2-107-23-76-12.compute-1.amazonaws.com' dbname = 'd7njsi7ltrih2l' user = 'avoldyshprcjzu' password = '2a92b7788746e69afe72137c1021fdb9966e4ceb2c41ad68c71e7aedd7e65db3'"
+    conn = psycopg2.connect(conn_string)
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM area WHERE location LIKE '%{0}%';".format(response))
+    rows = cur.fetchall()
+    print(type(rows))
+    return rows
+
+if __name__=='__main__':
+    # db_create()
+    app.run(host='0.0.0.0')
