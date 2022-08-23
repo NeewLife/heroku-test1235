@@ -134,9 +134,9 @@ def private():
                         "title": "알고 싶으신 민간분양 유형을 눌러주세요.",
                         "buttons": [
                     {
-                        "action": "message",
+                        "action": "block",
                         "label": "일반공급",
-                        "messageText": "일반분양입니다."
+                        "blockId": "62f5ccd1f534cf44c78eaf29"
                     },
                     {
                         "action": "block",
