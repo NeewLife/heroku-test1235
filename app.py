@@ -18,12 +18,12 @@ def hello():
 def commit():
     content = request.get_json()
     print(content)
-    response = content['userRequest']['utterance']
+    response = content['action']['params']
     print(response)
     print(type(response))
-    #repo = response['loc2']
-    #print(repo)
-    #print(type(repo))
+    repo = response['loc2']
+    print(repo)
+    print(type(repo))
     df = database.area(response)
     print(df)
 
