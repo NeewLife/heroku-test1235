@@ -52,26 +52,70 @@ def test():
     return jsonify(dataSend)
 
 
-@app.route('/message', methods=['POST'])
+@app.route('/main', methods=['POST'])
 def Message():
 
     content = request.get_json()
     print(content)
 
     dataSend = {
-        "version": "2.0",
-        "template": {
-            "outputs": [
+    "version": "2.0",
+    "template": {
+        "outputs": [
+        {
+            "carousel": {
+            "type": "basicCard",
+            "items": [
                 {
-                    "simpleText": {
-                        "text": "간단한 텍스트 요소입니다."
-                    }
+                    "title": "현재 진행중인 공고",
+                    "thumbnail": {
+                        "imageUrl": "https://raw.githubusercontent.com/NeewLife/heroku-test1235/main/image/premium-icon-south-korea-4480704.png",
+                        "fixedRatio": True,
+                        "width": 378,
+                        "height": 378
+                    },
+                    "buttons": [
+                        {
+                        "action": "block",
+                        "blockId": "62fde9759a43ea1c82652cfb",
+                        "label": "공고(수도권)",
+                        }
+                    ]
+                },
+                {
+                    "title": "청약 유형별 정보",
+                    "thumbnail": {
+                        "imageUrl": "https://raw.githubusercontent.com/NeewLife/heroku-test1235/main/image/%EB%AF%BC%EA%B0%84%EC%8B%A0%ED%98%BC%EB%B6%80%EB%B6%80.png",
+                        "fixedRatio": True,
+                        "width": 378,
+                        "height": 378
+                    },
+                    "buttons": [
+                        {
+                        "action": "block",
+                        "blockId": "62f5e20ffb4d7520b2bbabbe",
+                        "label": "공공분양",
+                        
+                        },
+                        {
+                            "action": "block",
+                        "blockId": "62f5eb7278a1fc2ba5b25b9b",
+                        "label": "민간분양",
+                        }
+                        ]
+                        }
+                    ]
                 }
+        }
             ]
         }
     }
     return jsonify(dataSend)
 
+
+
+
+# 민간 분양유형 스킬
 @app.route('/private', methods=['POST'])
 def private():
 
@@ -115,6 +159,8 @@ def private():
 
     return jsonify(dataSend)
 
+
+# 민간 - 특별공급 스킬
 @app.route('/private/special', methods=['POST'])
 def private2():
 
@@ -219,6 +265,7 @@ def private2():
     }
     return jsonify(dataSend)
 
+# 민간 - 우선공급 스킬
 @app.route('/private/priority', methods=['POST'])
 def private3():
 
