@@ -93,7 +93,7 @@ def Message():
                     "buttons": [
                         {
                         "action": "block",
-                        "blockId": "62f5e20ffb4d7520b2bbabbe",
+                        "blockId": "62fc9e109a43ea1c8265146f",
                         "label": "공공분양",
                         
                         },
