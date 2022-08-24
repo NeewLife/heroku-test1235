@@ -85,7 +85,7 @@ def Message():
                 {
                     "title": "청약 유형별 정보",
                     "thumbnail": {
-                        "imageUrl": "https://github.com/NeewLife/heroku-test1235/blob/main/image/KakaoTalk_20220824_124933931.png",
+                        "imageUrl": "https://raw.githubusercontent.com/NeewLife/heroku-test1235/main/image/KakaoTalk_20220824_124933931.png",
                         "fixedRatio": True,
                         "width": 378,
                         "height": 378
