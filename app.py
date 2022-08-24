@@ -69,7 +69,7 @@ def Message():
                 {
                     "title": "현재 진행중인 공고",
                     "thumbnail": {
-                        "imageUrl": "https://raw.githubusercontent.com/NeewLife/heroku-test1235/main/image/premium-icon-south-korea-4480704.png",
+                        "imageUrl": "https://raw.githubusercontent.com/NeewLife/heroku-test1235/main/image/KakaoTalk_20220824_124933850.png",
                         "fixedRatio": True,
                         "width": 378,
                         "height": 378
@@ -85,7 +85,7 @@ def Message():
                 {
                     "title": "청약 유형별 정보",
                     "thumbnail": {
-                        "imageUrl": "https://raw.githubusercontent.com/NeewLife/heroku-test1235/main/image/%EB%AF%BC%EA%B0%84%EC%8B%A0%ED%98%BC%EB%B6%80%EB%B6%80.png",
+                        "imageUrl": "https://github.com/NeewLife/heroku-test1235/blob/main/image/KakaoTalk_20220824_124933931.png",
                         "fixedRatio": True,
                         "width": 378,
                         "height": 378
